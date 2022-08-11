@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/happyTails', {
+mongoose.connect('mongodb://localhost/happyTailsContact', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

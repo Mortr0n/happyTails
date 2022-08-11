@@ -5,9 +5,8 @@ app.use(cors());
 app.use(express.json(), express.urlencoded({extended: true}));
 
 
-require('./routes/happyTails.routes')(app);
 require('./config/mongoose.config');
-require('./routes/happyTails.routes')(app)
+require('./routes/happyTailsContact.routes')(app)
 
 
 
