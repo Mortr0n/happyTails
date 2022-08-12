@@ -5,11 +5,13 @@ module.exports = {
     index: (req, res) => {
         res.json({ message: "Happy Tails"});
     },
+
     createHappyTailsContact: (req, res) => {
         happyTailsContact.create(req.body)
-            .then((newContact) => res.json("New Contact ", newContact))
-            .catch(err => res.status(400).json("Error Creating new contact in controller ", err));
+            .then(contact => res.json(contact))
+            .catch(err => res.json(err))
     },
+
     getAllHappyTailsContacts: (req, res) => {
         happyTailsContact.find()
             .then((allContacts) => {
@@ -18,31 +20,27 @@ module.exports = {
             })
             .catch(err => res.status(400).json("Controller error get all contacts ", err));
     },
+
     getOneHappyTailsContact: (req, res) => {
-        happyTailsContact.findById({ _id: req.params.id })
-            .then((oneContact) => {
-                console.log("One Contact ", oneContact)
-            })
-            .catch(err => res.status(400).json("Controller error get one contact ", err));
+        happyTailsContact.findOne({ _id: req.params.id })
+            .then(contact => res.json(contact))
+            .catch(err => res.status(400).json(err))
     },
+
     updateOneHappyTailsContact: (req, res) => {
         happyTailsContact.findByIdAndUpdate(
-            { _id: req.params.id },
+            { _id: req.params.id }, 
             req.body,
-            { new: true, runValidators: true }
-        )
-            .then((updatedContact) => {
-                console.log("Updated contact ", updatedContact);
-                res.json(updatedContact);
-            });
+            { new: true, runValidators: true },
+            )
+            .then(contact => res.json(contact))
+            .catch(err => res.json(err))
     },
+
     deleteOneHappyTailsContact: (req, res) => {
         happyTailsContact.findByIdAndDelete({ _id: req.params.id })
-            .then((deletedContact) => {
-                console.log("Deleted Contact ", deletedContact);
-                res.json(deletedContact);
-            })
-            .catch(err => res.status(400).json("Controller error delete one contact", err));
-    },
+            .then(DeletedContact => res.json(DeletedContact))
+            .catch(err => res.json(err))
+    }
 
 }
