@@ -32,16 +32,19 @@ const ContactForm = (props: IProps) => {
     return(
         <div className="d-flex container col-12 justify-content-center">
             <form >
-                <div className="form-div d-flex flex-column ">
-                    <label className="label d-flex justify-content-end">First Name
+                <div className="form-div d-flex flex-column justify-content-end ">
+                    <div className="d-flex flex-row">
+                        <label className="label d-flex">First Name</label>
                         <input className="form-inputs" type='text' name="firstName" onChange={(e) => handleInputChange(e)} />
-                    </label>
-                    <label className="label d-flex justify-content-end">Last Name
+                    </div>
+                    <div className="d-flex flex-row justify-content-end">
+                        <label className="label d-flex justify-content-end">Last Name </label>
                         <input className="form-inputs" type='text' name="lastName" onChange={(e) => handleInputChange(e)} />
-                    </label>
-                    <label className="label d-flex justify-content-end">Email
+                    </div>
+                    <div className="d-flex flex-row justify-content-end">
+                        <label className="label d-flex justify-content-end">Email</label>
                         <input className="form-inputs" type='emailAddress' name="emailAddress" onChange={(e) => handleInputChange(e)} />
-                    </label>
+                    </div>
                 </div>
                 <button type="submit" onClick={(e) => handleSubmit(e)}>Send me your info!</button>
             </form>
