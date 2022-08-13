@@ -1,0 +1,22 @@
+.form-div {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px darkgray;
+    margin: 5px;
+    background-color: #9cdcff;
+}
+
+.label {
+    margin: 10px;
+    justify-content: center;
+}
+
+.form-inputs {
+    margin: 3px;
+}
+
+.form-inputs:hover, .form-inputs:focus-visible {
+    border: #ff8bf7;
+    box-shadow: 0 0 2px 2px #ff8bf7;
+    outline: none;
+}

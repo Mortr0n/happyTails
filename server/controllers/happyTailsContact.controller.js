@@ -8,8 +8,14 @@ module.exports = {
 
     createHappyTailsContact: (req, res) => {
         happyTailsContact.create(req.body)
-            .then(contact => res.json(contact))
-            .catch(err => res.json(err))
+            .then(contact => {
+                console.log("Contact is ", contact);
+                res.json(contact);
+            })
+            .catch(err => {
+                console.log("Error creating contact from controller ", err)
+                res.status(400).json(err)
+            })
     },
 
     getAllHappyTailsContacts: (req, res) => {
