@@ -21,7 +21,7 @@ function App() {
     <div className="App bg">
       <NavBar />
         <Router>
-          <GoToMain path="/"  />
+          <GoToMain path="/Main"  />
           <GoToContactForm path='/contacts' />
         </Router>
     </div>

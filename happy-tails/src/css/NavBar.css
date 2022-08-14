@@ -23,6 +23,12 @@
 
 .nav-title {
     border-radius: 15px;
+    text-decoration: none;
+    color: purple;
+}
+
+.link-title {
+    text-decoration: none;
 }
 
 .nav-title:hover { 

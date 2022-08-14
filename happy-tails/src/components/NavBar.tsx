@@ -19,7 +19,7 @@ const NavBar = () => {
         <div className='nav-outer-div'>
             <ul className='nav-bar nav-background d-flex flex-row justify-content-between'>
                 <div className='nav-title-div nav-background'>
-                    <Link to="/"><h4 className='nav-title'>Big Sky Happy Tails</h4></Link>
+                    <Link className='link-title' to="Main"><h4 className='nav-title'>Big Sky Happy Tails</h4></Link>{" "}
                 </div>            
                 {
                     navItems.map((item) => {
