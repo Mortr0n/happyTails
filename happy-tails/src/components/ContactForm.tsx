@@ -27,10 +27,9 @@ const ContactForm = (props: IProps) => {
             .catch((err) => console.log("Error creating contact with axios ", err))
     } 
 
-
-
     return(
         <div className="d-flex container col-12 justify-content-center">
+            <h1>contacts</h1>
             <form >
                 <div className="form-div d-flex flex-column justify-content-end ">
                     <div className="d-flex flex-row">

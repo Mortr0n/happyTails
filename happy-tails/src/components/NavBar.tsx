@@ -1,10 +1,37 @@
+import { Link } from '@reach/router';
 import React from 'react';
+import '../css/NavBar.css';
 
 const NavBar = () => {
+    const navItems = [
+        "Adopt",
+        "Foster",
+        "Spay",
+        "Surrender",
+        "Donate",
+        "Success",
+        "Posts"
+    ]
+
 
 
     return(
-        <h1>Happy Tails Nav Bar</h1>
+        <div className='nav-outer-div'>
+            <ul className='nav-bar nav-background d-flex flex-row justify-content-between'>
+                <div className='nav-title-div nav-background'>
+                    <Link to="/"><h4 className='nav-title'>Big Sky Happy Tails</h4></Link>
+                </div>            
+                {
+                    navItems.map((item) => {
+                        return(
+                            <li className='nav-items nav-background'>{item}</li>
+                        )
+                        
+                    })
+                }
+            </ul>
+        </div>
+        
     )
 }
 

@@ -1,6 +1,5 @@
 import React from "react";
-import ContactForm from "../components/ContactForm";
-import ContactList from "./ContactList";
+
 
 const Main = () => {
     // const [contacts, setContacts] = useState([] as ContactType[]);
@@ -8,6 +7,7 @@ const Main = () => {
     return(
         <>
         <h1>Main</h1>
+        <p>hi</p>
         {/* <ContactForm 
             contacts={contactProp}
             setContacts={setContacts}
