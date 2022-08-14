@@ -18,8 +18,9 @@ body, html {
 
 .bg {
   /* The image used */
-  background-image: url("../src/images/puppy-pexels-vladimir-srajber-12205353.jpg");
-  min-height: 800px;
+  /* background-image: url("../src/images/puppy-pexels-vladimir-srajber-12205353-darkened.jpg"); */
+  min-height: 650px;
+  background-color: #9cdcff;
   /* Full height */
   height: 100%;
 

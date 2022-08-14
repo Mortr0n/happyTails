@@ -4,16 +4,24 @@
     margin: 0;
     margin: 0;
     height: 2rem;
+    width: 50%;
+    padding-top: 90px;
+}
+
+.logo {
+    height: 230px;
+    width: 300px;
 }
 
 .nav-background {
-    background-color: #cfb4fb;
+    /* background-color: #cfb4fb; */
 }
 
 .nav-outer-div {
-    background-color: #b5c8fd;
+    /* background-color: #b5c8fd; */
     padding: 5px;
     border-radius: 25px;
+    height: 10rem;
 }
 
 .nav-title-div {
@@ -24,12 +32,16 @@
 .nav-title {
     border-radius: 15px;
     text-decoration: none;
-    color: purple;
+    color: black;
+    align-self: center;
 }
 
-.link-title {
+.link-title, .link-items {
     text-decoration: none;
+    color: black;
+    align-self: center;
 }
+
 
 .nav-title:hover { 
     align-self: center;
