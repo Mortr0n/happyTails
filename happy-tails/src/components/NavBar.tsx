@@ -29,7 +29,7 @@ const NavBar = () => {
                     {
                         navItems.map((item) => {
                             return(
-                                <NavLink className={`link-item-${item} link-items`} to={`${item}`} ><li className='nav-items nav-background'>{item}</li></NavLink> 
+                                <NavLink key={item} className={`link-item-${item} link-items`} to={`${item}`} ><li className='nav-items nav-background'>{item}</li></NavLink> 
                             )
                             
                         })

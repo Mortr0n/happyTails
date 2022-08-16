@@ -6,6 +6,7 @@ import './css/Background.css'
 import Main from './views/Main';
 import ContactForm from './components/ContactForm';
 import { Route, Routes } from 'react-router-dom';
+import LogReg from './views/LogReg';
 
 
 
@@ -21,8 +22,9 @@ function App() {
     <div className="App bg">
       <NavBar />
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
+          <Route path="/login" element={<LogReg />} />
+          <Route path='/' element={<Main />} />
+          <Route path="/happyTails/createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
           {/* <GoToMain path="/Main"  />
           <GoToContactForm path='/contacts' /> */}
         </Routes>
