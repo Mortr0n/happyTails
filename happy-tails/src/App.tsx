@@ -7,6 +7,7 @@ import Main from './views/Main';
 import ContactForm from './components/ContactForm';
 import { Route, Routes } from 'react-router-dom';
 import LogReg from './views/LogReg';
+import AddContent from './views/AddContent';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/login" element={<LogReg />} />
           <Route path='/' element={<Main />} />
           <Route path="/happyTails/createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
+          <Route path="/happyTails/users/addContent" element={<AddContent />} />
           {/* <GoToMain path="/Main"  />
           <GoToContactForm path='/contacts' /> */}
         </Routes>
