@@ -1,4 +1,4 @@
-.nav-bar {
+.nav-bar-ul {
     border-radius: 20px;
     list-style-type: none;
     margin: 0;
@@ -61,4 +61,20 @@
     background-color: #f396f8;
     box-shadow: 0 0 5px 5px #f396f8;
     
+}
+
+.menu-icon {
+
+}
+
+@media(max-width: 1200px) {
+    #list-div {
+        display: none !important;
+    }
+}
+
+@media(min-width: 1200px) {
+    .menu-icon {
+        display: none !important;
+    }
 }
