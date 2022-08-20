@@ -1,0 +1,17 @@
+.mission-statement {
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+}
+
+.mission-statement-div {
+    width: 100%;
+}
+
+.about-text {
+    font-size: 1.2rem;
+}
+
+.about-content {
+    min-height: 850px;
+}

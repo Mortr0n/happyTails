@@ -5,9 +5,12 @@ import { ContactType } from './components/Types';
 import './css/Background.css'
 import Main from './views/Main';
 import ContactForm from './components/ContactForm';
-import { Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import LogReg from './views/LogReg';
 import AddContent from './views/AddContent';
+import logo from './images/HPTransparentTry1.png'
+import Gallery from './views/Gallery';
+import About from './views/About';
 
 
 
@@ -21,15 +24,37 @@ function App() {
 
   return (
     <div className="App bg">
-      <NavBar />
-        <Routes>
-          <Route path="/login" element={<LogReg />} />
-          <Route path='/' element={<Main />} />
-          <Route path="/happyTails/createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
-          <Route path="/happyTails/users/addContent" element={<AddContent />} />
-          {/* <GoToMain path="/Main"  />
-          <GoToContactForm path='/contacts' /> */}
-        </Routes>
+      <div className='wrapper'>
+        <header className='main-head'>
+          <NavLink className='link-title' to="/">
+              <img className='logo' src={logo} alt='Happy Tails Logo' />
+          </NavLink>{" "}  
+        </header>
+        <nav className='main-nav'>
+          <NavBar  />
+        </nav>
+        <div className='side'></div>
+        <div className='content1'>
+          <Routes>
+            <Route path="/login" element={<LogReg />} />
+            <Route path='/about' element={<About />} />
+            <Route path="/happyTails/createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
+            <Route path="/happyTails/users/addContent" element={<AddContent />} />
+            {/* <GoToMain path="/Main"  />
+            <GoToContactForm path='/contacts' /> */}
+          </Routes>
+        </div>
+        <div className='content2'>
+            <Routes>
+              <Route path="/about" element={<Gallery />} />
+            </Routes>
+
+        </div>
+        <div className='side2'></div>
+        <footer className='main-footer'></footer>
+      </div>
+      
+        
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.main-gallery-div {
+    width: 90%;
+    /* height: 40vh; */
+    border: 3px solid #f991f8;
+    border-radius: 10px;
+}
+
+.temp-image {
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 8px;
+}
