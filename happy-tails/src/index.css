@@ -20,7 +20,8 @@ body, html {
   /* The image used */
   /* background-image: url("../src/images/puppy-pexels-vladimir-srajber-12205353-darkened.jpg"); */
   min-height: 650px;
-  /* background-color: #9cdcff; */
+  min-width: 100%;
+  background-color: #9cdcff;
   /* Full height */
   height: 100%;
 

@@ -34,21 +34,16 @@ function App() {
           <NavBar  />
         </nav>
         <div className='side'></div>
-        <div className='content1'>
+        <div className='content'>
           <Routes>
             <Route path="/login" element={<LogReg />} />
+            <Route path="/" element={<Main />} />
             <Route path='/about' element={<About />} />
             <Route path="/happyTails/createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
             <Route path="/happyTails/users/addContent" element={<AddContent />} />
             {/* <GoToMain path="/Main"  />
             <GoToContactForm path='/contacts' /> */}
           </Routes>
-        </div>
-        <div className='content2'>
-            <Routes>
-              <Route path="/about" element={<Gallery />} />
-            </Routes>
-
         </div>
         <div className='side2'></div>
         <footer className='main-footer'></footer>
