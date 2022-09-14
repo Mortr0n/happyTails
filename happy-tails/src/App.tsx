@@ -11,6 +11,8 @@ import AddContent from './views/AddContent';
 import logo from './images/HPTransparentTry1.png'
 import Gallery from './views/Gallery';
 import About from './views/About';
+import { IndexKind } from 'typescript';
+import Index from './views/Index';
 
 
 
@@ -41,6 +43,7 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path="/happyTails/createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
             <Route path="/happyTails/users/addContent" element={<AddContent />} />
+            <Route path="/happyTails/uploadPhoto" element={<Index />} />
             {/* <GoToMain path="/Main"  />
             <GoToContactForm path='/contacts' /> */}
           </Routes>

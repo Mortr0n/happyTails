@@ -3,16 +3,6 @@ const AnimalPhoto = require('../models/animalPhoto.model');
 const fs = require("fs");
 const multer = require("multer");
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'uploads')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-})
-
-const upload = multer({ storage: storage })
 
 const getAnimalAllAnimalPhotos = (req, res) => {
     AnimalPhoto.find()
@@ -41,6 +31,7 @@ const addAnimalPhoto = (req, res) => {
         }
     })
 }
+
 
 module.exports = {
     getAnimalAllAnimalPhotos,
