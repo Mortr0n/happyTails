@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const AnimalPhotoSchema = new mongoose.Schema({
-    // animalPhotoTitle: {
-    //     type: String,
-    //     required: [true, "Please enter a title for the photo"],
-    //     minlength: [2, "Title must be at least 2 characters"]
-    // },
+    animalPhotoTitle: {
+        type: String,
+        // required: [true, "Please enter a title for the photo"],
+        // minlength: [2, "Title must be at least 2 characters"]
+    },
 
     // animalPhotoDescription: {
     //     type: String,

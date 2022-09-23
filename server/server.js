@@ -13,18 +13,18 @@ app.use(express.json(), express.urlencoded({
     extended: true
 }));
 app.set("view engine", "ejs")
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'uploads')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-})
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, './uploads/')
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, file.fieldname + '-' + Date.now())
+//     }
+// })
 
-const upload = multer({
-    storage: storage
-})
+// const upload = multer({
+//     storage: storage
+// })
 app.use(cors({
     credentials: true,
     origin: 'http://localhost:3000'
@@ -38,20 +38,52 @@ require('./routes/user.routes')(app);
 require('./routes/animalPhoto.routes')(app);
 
 
-app.post("/uploadPhoto", upload.single("myImage"), (req, res) => {
-    const obj = {
-        img: {
-            data: fs.readFileSync(path.join(__dirname + "/uploads/" + req.file.filename)),
-            contentType: "image/png"
-        }
-    }
-    const newImage = new ImageModel({
-        image: obj.img
-    });
-    newImage.save((err) => {
-        err ? console.log(err) : res.redirect("/");
-    });
-});
+// app.post("/api/animalPhoto", upload.single("animalPhoto"), (req, res, next) => {
+//     console.log(req.file);
+//     const absolutePath = path.join(__dirname, req.file.path);
+//     const jsonString = fs.readFileSync(absolutePath, "utf-8");
+//     console.log(jsonString);
+//     // console.warn(xhr.responseText);
+//     const jsonObject = JSON.parse(jsonString);
+    
+//     console.log(jsonObject);
+//     res.redirect("/happyTails/users/addContent");
+// })
+
+// app.post("/uploadPhoto", upload.single("myImage"), (req, res) => {
+//     const obj = {
+//         img: {
+//             data: fs.readFileSync(path.join(__dirname + "/uploads/" + req.file.filename)),
+//             contentType: "image/png"
+//         }
+//     }
+//     const newImage = new ImageModel({
+//         image: obj.img
+//     });
+//     newImage.save((err) => {
+//         err ? console.log(err) : res.redirect("/");
+//     });
+// });
+
+// app.post('/api/animalPhoto', upload.single('image'), (req, res, next) => {
+//     var obj = {
+//         name: req.body.name,
+//         desc: req.body.desc,
+//         img: {
+//             data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+//             contentType: 'image/png'
+//         }
+//     }
+//     imgModel.create(obj, (err, item) => {
+//         if (err) {
+//             console.log(err);
+//         }
+//         else {
+//             // item.save();
+//             res.redirect('/');
+//         }
+//     });
+// });
 
 app.get("/getPhoto", (req, res) => {
     ImageModel.find({}, (err, images) => {

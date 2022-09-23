@@ -2,7 +2,20 @@
 const AnimalPhoto = require('../models/animalPhoto.model');
 const fs = require("fs");
 const multer = require("multer");
+const path = require('path');
 
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, '../../uploads')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+})
+
+const upload = multer({
+    storage: storage
+})
 
 const getAnimalAllAnimalPhotos = (req, res) => {
     AnimalPhoto.find()
@@ -12,15 +25,24 @@ const getAnimalAllAnimalPhotos = (req, res) => {
         .catch(err => res.status(400).json("Error in getting photos with controller ", err))
 }
 
+// app.post("/api/animalPhoto", upload.single("animalPhoto"), (req, res, next) => {
+//     console.log(req.file);
+//     const absolutePath = path.join(__dirname, req.file.path);
+//     const jsonString = fs.readFileSync(absolutePath, "utf-8");
+//     console.log(jsonString);
+//     // console.warn(xhr.responseText);
+//     const jsonObject = JSON.parse(jsonString);
+    
+//     console.log(jsonObject);
+//     res.redirect("/happyTails/users/addContent");
+// })
+
 const addAnimalPhoto = (req, res) => {
-    console.log(req.body)
-    const image = fs.readFileSync(req.file.path);
-    const encode_image = image.toString('base64');
-    var final_image = {
-        contentType: req.file.mimetype,
-        image: new Buffer(encode_image, 'base64')
-    };    
-    AnimalPhoto.create(final_image, function(err, result){
+    console.log(req.file)
+    const absolutePath = path.join(__dirname, req.file.path);
+    const jsonString = fs.readFileSync(absolutePath, "utf-8");
+    const jsonObject = JSON.parse(jsonString);
+    AnimalPhoto.create(jsonObject, (err, final_image) => {
         if(err) {
             console.log("Error with the create part of controller ", err)
         } else {
@@ -31,6 +53,7 @@ const addAnimalPhoto = (req, res) => {
         }
     })
 }
+
 
 
 module.exports = {
