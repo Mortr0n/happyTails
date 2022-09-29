@@ -27,7 +27,7 @@ app.use(express.json(), express.urlencoded({
 // const upload = multer({
 //     storage: storage
 // })
-//TODO: Maybe use express later.  Just get this f'ing thing working for now!!!!!!!!!
+//TODO: Maybe use express later.  Just get this  thing working for now!!!!!!!!!
 
 
 app.use(cors({
@@ -37,7 +37,7 @@ app.use(cors({
 app.use(cookieParser());
 
 
-//FIXME: I already have api stuff so I went with uploadAPI we'll see if this fucks it all up.
+//FIXME: I already have api stuff so I went with uploadAPI we'll see if this screws it all up
 app.use('/api', fileRoutes.routes);
 
 
