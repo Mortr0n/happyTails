@@ -16,6 +16,7 @@ const singleFileUpload = async (req, res, next) => {
     }
 }
 
+
 const fileSizeFormatter = (bytes, decimal) => {
     if(bytes === 0){
         return '0 Bytes';

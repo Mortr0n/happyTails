@@ -18,6 +18,10 @@ const singleFileSchema = new Schema({
     fileSize: {
         type: String,
         required: true
+    },
+    animalId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "AnimalForAdoption",
     }
 }, {timestamps: true});
 

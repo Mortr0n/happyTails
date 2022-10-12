@@ -31,6 +31,11 @@ const UserSchema = new mongoose.Schema({
         // select: false
     },
 
+    animalsAdded: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "AnimalForAdoption"
+    }
+
 }, { timestamps: true });
 
 UserSchema.virtual('confirmPassword')

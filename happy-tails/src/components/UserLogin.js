@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { navigate, Link } from '@reach/router';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const UserLogin = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState('');
+
+  const navigate = useNavigate();
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -27,7 +30,7 @@ const UserLogin = () => {
 
         // sessionStorage.setItem("userId", res.data.user._id)
         // const userId = sessionStorage.getItem("userId") || "not logged in"
-        navigate('/home');  
+        navigate('/About'); 
     })
     .catch((err) => {
         console.log(err.response);

@@ -27,17 +27,6 @@ module.exports = {
             .catch(err => res.status(400).json("Error in getting photos with controller ", err))
     },
     
-    // app.post("/api/animalPhoto", upload.single("animalPhoto"), (req, res, next) => {
-    //     console.log(req.file);
-    //     const absolutePath = path.join(__dirname, req.file.path);
-    //     const jsonString = fs.readFileSync(absolutePath, "utf-8");
-    //     console.log(jsonString);
-    //     // console.warn(xhr.responseText);
-    //     const jsonObject = JSON.parse(jsonString);
-        
-    //     console.log(jsonObject);
-    //     res.redirect("/happyTails/users/addContent");
-    // })
     
     addAnimalPhoto: (req, res) => {
         console.log(req.file)

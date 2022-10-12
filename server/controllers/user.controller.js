@@ -54,18 +54,18 @@ module.exports = {
                             })
                         } else {
                             // TODO: Remove after working
-                            console.log("else")
+                            console.log("else", isPasswordValid)
                             res.status(400).json({
                                 message: "invalid login attempt"
                             })
-                            .catch((err) => {
-                                // TODO: remove after working
-                                console.log("comparison invalid")
-                                res.status(400).json({
-                                    message: "invalid login"
-                                })
-                            })
                         }
+                    })
+                    .catch((err) => {
+                        // TODO: remove after working
+                        console.log("comparison invalid")
+                        res.status(400).json({
+                            message: "invalid login"
+                        })
                     })
             }
         })
