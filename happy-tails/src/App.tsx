@@ -42,8 +42,9 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path='/about' element={<About />} />
             <Route path="/happyTails/createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
-            <Route path="/happyTails/users/addContent" element={<AddContent />} />
+            <Route path="/happyTails/user/addContent" element={<AddContent />} />
             <Route path="/happyTails/uploadPhoto" element={<Index />} />
+            <Route path="/happyTails/user/addAnimal" />
             {/* <GoToMain path="/Main"  />
             <GoToContactForm path='/contacts' /> */}
           </Routes>
