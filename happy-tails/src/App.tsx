@@ -12,6 +12,7 @@ import logo from './images/HPTransparentTry1.png'
 import About from './views/About';
 import Index from './views/Index';
 import Adopt from './views/Adopt';
+import EditAnimal from './views/EditAnimal';
 
 
 
@@ -45,6 +46,8 @@ function App() {
             <Route path="/happyTails/uploadPhoto" element={<Index />} />
             {/* <Route path="/happyTails/user/addAnimal" /> */}
             <Route path="/Adopt" element={<Adopt />} />
+
+            <Route path="/user/editAnimal/:animalId" element={<EditAnimal />} />
           </Routes>
         </div>
         <div className='side2'></div>

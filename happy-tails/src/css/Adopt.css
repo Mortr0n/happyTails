@@ -1,7 +1,7 @@
 .animal-to-adopt {
     border-radius: 10px;
     background-color: #fa62c2 ;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -50,6 +50,12 @@
 .adoption-choice-container {
     margin: 10px auto;
     width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-div {
+    padding: 5px 0 5px 0;
     display: flex;
     justify-content: space-evenly;
 }
