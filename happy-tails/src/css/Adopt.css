@@ -1,0 +1,25 @@
+.animal-to-adopt {
+    border-radius: 10px;
+    background-color: #fa62c2 ;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+}
+
+.adopt-item-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.adopt-item {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.adoption-images {
+    margin: 5px;
+    border-radius: 10px;
+}

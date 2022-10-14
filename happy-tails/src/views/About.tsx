@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/About.css'
-import Gallery from './Gallery';
+import Gallery from './DogGallery';
 import cat from '../images/pexels-ion-ceban-ionelceban-6768704.jpg';
 
 const About = () => {

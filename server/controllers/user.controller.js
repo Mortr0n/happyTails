@@ -52,6 +52,7 @@ module.exports = {
                                 userFirstName: userRecord.firstName,
                                 userLastName: userRecord.lastName
                             })
+                            
                         } else {
                             // TODO: Remove after working
                             console.log("else", isPasswordValid)
@@ -60,13 +61,13 @@ module.exports = {
                             })
                         }
                     })
-                    .catch((err) => {
-                        // TODO: remove after working
-                        console.log("comparison invalid")
-                        res.status(400).json({
-                            message: "invalid login"
-                        })
-                    })
+                    // .catch((err) => {
+                    //     // TODO: remove after working
+                    //     console.log("comparison invalid")
+                    //     res.status(400).json({
+                    //         message: "invalid login"
+                    //     })
+                    // })
             }
         })
     },

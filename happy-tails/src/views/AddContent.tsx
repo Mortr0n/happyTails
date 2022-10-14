@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import NewAnimalForm from "../components/NewAnimalForm";
 import NewAnimalPicture from "../components/NewAnimalPicture";
 import { NewAnimalType } from "./Types";
@@ -7,7 +8,7 @@ import { NewAnimalType } from "./Types";
 const AddContent = () => {
     const [showAddAnimalForm, setShowAddAnimalForm] = useState(false);
     const [newAnimal, setNewAnimal] = useState({} as NewAnimalType);
-    
+    const navigate = useNavigate();
 
     const addAnimalPhotoClick = () => {
         setShowAddAnimalForm(!showAddAnimalForm);
@@ -25,6 +26,9 @@ const AddContent = () => {
             })
             .catch((err) => {
                 console.log("Error adding picture in post", err);
+            })
+            .finally(() => {
+                navigate('/Adopt')
             })
     }
 

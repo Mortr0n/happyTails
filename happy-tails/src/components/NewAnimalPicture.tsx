@@ -14,9 +14,10 @@ const NewAnimalPicture = (props: IProps) => {
 
     }
 
+    
+
     const handleAddAnimalPhoto = (e: any) => {
         e.preventDefault();
-        addAnimalPhoto(file)
     }
 
 
@@ -37,7 +38,7 @@ const NewAnimalPicture = (props: IProps) => {
                                 <FormLabel>Add Photo:</FormLabel>
                                 <Input type="file" name="file"></Input>
                             </div>
-                            <Button onClick={handleAddAnimalPhoto(file)}  variant="outlined" type="submit">Add Photo</Button>
+                            <Button onClick={(e) => handleAddAnimalPhoto(e)}  variant="outlined" type="submit">Add Photo</Button>
                         </form>
                     </FormGroup>
                 </DialogContent>

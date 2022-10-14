@@ -2,6 +2,6 @@ const AnimalForAdoptionController = require('../controllers/animalForAdoptionCon
 const { authenticate } = require('../config/jwt.config');
 
 module.exports = (app) => {
-    app.get('/api/animalsForAdoption', authenticate, AnimalForAdoptionController.getAllAnimalsForAdoption);
+    app.get('/api/animalsForAdoption', AnimalForAdoptionController.getAllAnimalsForAdoption);
     app.post('/api/animalsForAdoption', AnimalForAdoptionController.createAnimalForAdoption);
 }

@@ -61,8 +61,8 @@ const onSubmitHandler = (e) => {
             // const userId = localStorage.getItem("userId") || "not logged in"
         })
         .catch((err) => {
-            console.log(err);
-            console.log(err.response.data.errors);
+            console.log("Error with login" , err);
+            // console.log(err.response.data.errors);
             if (err.response.data.errors) {
                 setErrors(err.response.data.errors);
             } 

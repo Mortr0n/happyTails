@@ -9,10 +9,9 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import LogReg from './views/LogReg';
 import AddContent from './views/AddContent';
 import logo from './images/HPTransparentTry1.png'
-import Gallery from './views/Gallery';
 import About from './views/About';
-import { IndexKind } from 'typescript';
 import Index from './views/Index';
+import Adopt from './views/Adopt';
 
 
 
@@ -44,9 +43,8 @@ function App() {
             <Route path="/happyTails/createContact" element={<ContactForm contacts={contacts} setContacts={setContacts} />} />
             <Route path="/happyTails/user/addContent" element={<AddContent />} />
             <Route path="/happyTails/uploadPhoto" element={<Index />} />
-            <Route path="/happyTails/user/addAnimal" />
-            {/* <GoToMain path="/Main"  />
-            <GoToContactForm path='/contacts' /> */}
+            {/* <Route path="/happyTails/user/addAnimal" /> */}
+            <Route path="/Adopt" element={<Adopt />} />
           </Routes>
         </div>
         <div className='side2'></div>

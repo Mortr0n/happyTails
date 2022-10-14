@@ -1,4 +1,4 @@
-const AnimalForAdoption = require('../models/animalForAdoption');
+const AnimalForAdoption = require('../models/animalForAdoption.model');
 const jwt = require('jsonwebtoken');
 const { populate } = require('../models/animalPhoto.model');
 

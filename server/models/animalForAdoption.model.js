@@ -44,8 +44,7 @@ const AnimalForAdoption = new Schema({
         maxLength: [500, "Must be less than 500 characters"]
     },
     animalPhoto: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "SingleFile"
+        type: String,
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,

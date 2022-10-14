@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports = () => {
-    mongoose.connect('mongodb://localhost/happyTailsPhotoUploadsDB', {
+    mongoose.connect('mongodb://localhost/happyTails', {
     // these are no longer necessary they are always assumed true and useFindAndModify is false so Imight have to figure that out 
     // useNewUrlParser: true,
         // useUnifiedTopology: true,
