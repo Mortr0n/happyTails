@@ -15,7 +15,10 @@ const DogGallery = (props: IProps) => {
 
 
     return(
+        <>
+        <h3>These good boys and good girls are looking for a place to call home and a family all their own.</h3>
         <div className="main-gallery-div">
+            
             {
                 dogs.map((dog) => {
                     return(
@@ -25,15 +28,16 @@ const DogGallery = (props: IProps) => {
                                 <p className='adopt-item'>{dog.name}</p>
                             </div>
                             
-                            <h4>Breed: {dog.breed}</h4>
-                            <h4>Coat Length: {dog.coatLength}</h4>
-                            <h4>Description: {dog.description}</h4>
+                            <h4><span className='bold'>Breed:</span> {dog.breed}</h4>
+                            <h4><span className='bold'>Coat Length:</span> {dog.coatLength}</h4>
+                            <h4 className='maxWidth'><span className='bold'>Description:</span> {dog.description}</h4>
                             <img className='adoption-images' src={dog.animalPhoto} height="400"/>
                         </div>
                     )
                 })
             }
         </div>
+        </>
     )
 
 }

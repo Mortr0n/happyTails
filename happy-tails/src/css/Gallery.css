@@ -1,6 +1,7 @@
 .main-gallery-div {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
-    border-radius: 10px;
+    /* border: 1px solid red; */
 }

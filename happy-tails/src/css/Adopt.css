@@ -6,6 +6,7 @@
     flex-direction: column;
     text-align: center;
     padding: 5px;
+    min-width: 450px;
 }
 
 .adopt-item-row {
@@ -22,4 +23,33 @@
 .adoption-images {
     margin: 5px;
     border-radius: 10px;
+    width: auto;
+    height: auto;
+    max-height: 450px;
+    max-width: 450px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.maxWidth {
+    max-width: 500px;
+}
+
+/* Gallery Page */
+
+.gallery-container {
+    text-align: center;
+}
+
+.cat-button, .dog-button {
+    margin: 5px;
+}
+
+.adoption-choice-container {
+    margin: 10px auto;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
 }
